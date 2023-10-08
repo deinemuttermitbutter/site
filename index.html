@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+</head>
+<body>
+    <iframe id="myIframe" src="https://www.google.com"></iframe>
+
+    <script>
+        // Access the iframe
+        var iframe = document.getElementById("myIframe");
+
+        // Wait for the iframe to load
+        iframe.onload = function () {
+            // Access the content of the iframe
+            var iframeContent = iframe.contentWindow.document;
+
+            // Example: Click a button in the iframe content
+            var buttonInIframe = iframeContent.getElementById("myButton");
+            buttonInIframe.click();
+        };
+    </script>
+</body>
+</html>
